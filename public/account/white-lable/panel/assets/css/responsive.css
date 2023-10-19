@@ -1,0 +1,99 @@
+/* ----------------------------------------------------------------
+	Responsive CSS
+-----------------------------------------------------------------*/
+
+
+@media (max-width: 1199.98px) {
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+
+@media (max-width: 991.98px) {
+    .export_btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .ul_col_5 li{
+        width: 46%;
+    }
+    label:not(.form-check-label):not(.custom-file-label) {
+        font-weight: 500;
+    }
+    .export_btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .ul_col_5 li{
+        width: 100%;
+    }
+    label:not(.form-check-label):not(.custom-file-label) {
+         font-weight: 500;
+    }
+    .export_btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .ul_col_5_form{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .ul_col_5_form li {
+        /* margin: 2px; */
+        padding: 0;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+    }
+    .mb-5-form{
+        margin-bottom: 5px;
+    }
+    .nav-tabs{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-tabs li{
+        width: 33%;
+        font-size: 13px;
+    }
+    .filter-data{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .filter-data li{
+        width: 100%;
+        list-style: none;
+        vertical-align: top;
+        display: inline-block;
+    }
+    .income_table{
+        width: 50%;
+    }
+}

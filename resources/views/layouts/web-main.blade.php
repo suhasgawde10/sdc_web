@@ -1,0 +1,7 @@
+@include('layouts.web-header-include')
+@yield('custom-css')
+@include('layouts.web-header')
+@yield('main-container')
+@include('layouts.web-footer-include')
+@yield('custom-js')
+@include('layouts.web-footer')

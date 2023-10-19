@@ -1,0 +1,14 @@
+<?php
+session_start();
+unset($_SESSION['dealer_email']);
+unset($_SESSION['dealer_id']);
+unset($_SESSION['dealer_name']);
+unset($_SESSION['dealer_contact']);
+unset($_SESSION['dealer_type']);
+unset($_SESSION['dealer_code']);
+unset($_SESSION['dealer_email_login']);
+unset($_SESSION['dealer_tmp_email']);
+unset($_SESSION['verified_status']);
+unset($_SESSION['login_contact']);
+header('location:dealer-register.php?sign-in=true');
+?>

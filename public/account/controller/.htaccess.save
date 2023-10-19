@@ -1,0 +1,378 @@
+RewriteEngine on
+
+
+# force ssl
+#RewriteCond     %{SERVER_PORT} ^80$
+#RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
+RewriteRule ^card/([^/]*)$    //index.php?card=$1
+RewriteRule ^about-us$    /about-us.php
+RewriteRule ^webinar$    /webinar.php
+RewriteRule ^webinar/$    /webinar.php/
+RewriteRule ^register$    /register.php
+RewriteRule ^register/$    /register.php/
+RewriteRule ^about-us$    /about-us.php
+RewriteRule ^about-us/$    /about-us.php/
+RewriteRule ^features$    /feature.php
+RewriteRule ^features/$    /feature.php/
+RewriteRule ^themes$    /screenshot.php
+RewriteRule ^themes/$    /screenshot.php/
+RewriteRule ^contact-us$    /contact.php
+RewriteRule ^contact-us/$    /contact.php/
+RewriteRule ^blogs$    /blogs.php
+RewriteRule ^blogs/$    /blogs.php/
+RewriteRule ^login$    /login.php
+RewriteRule ^login/$    /login.php/
+RewriteRule ^forgot-password$    /forgot-password.php
+RewriteRule ^forgot-password/$    /forgot-password.php/
+RewriteRule ^demo-cards$    /demo-cards.php
+RewriteRule ^demo-cards/$    /demo-cards.php/
+RewriteRule ^pricing$    /pricing.php
+RewriteRule ^pricing/$    /pricing.php/
+RewriteRule ^dealer-register$    /dealer-register.php
+RewriteRule ^dealer-register/$    /dealer-register.php/
+
+RewriteRule ^dealership-program$    /dealership-program.php
+RewriteRule ^dealership-program/$    /dealership-program.php/
+RewriteRule ^dealer-login$    /dealer-register.php?sign-in=true
+RewriteRule ^dealer-login/$    /dealer-register.php?sign-in=true/
+RewriteRule ^terms-and-conditions$    /terms-and-conditions.php
+RewriteRule ^terms-and-conditions/$    /terms-and-conditions.php/
+RewriteRule ^site-map$    /site-map.php
+RewriteRule ^site-map/$    /site-map.php/
+RewriteRule ^terms-of-use$    /terms-of-use.php
+RewriteRule ^terms-of-use/$    /terms-of-use.php/
+RewriteRule ^terms-of-dealership$    /terms-of-dealership.php
+RewriteRule ^terms-of-dealership/$    /terms-of-dealership.php/
+RewriteRule ^privacy-policy$    /privacy-policy.php
+RewriteRule ^privacy-policy/$    /privacy-policy.php/
+RewriteRule ^refund-and-return-policy$    /refund-and-return-policy.php
+RewriteRule ^refund-and-return-policy/$    /refund-and-return-policy.php/
+#RewriteRule ^$    /index.php
+RewriteRule ^index$    /index.php
+RewriteRule ^index/$    /index.php/
+RewriteRule ^index/([a-zA-Z0-9_-]+)$    /index.php?id=$1
+RewriteRule ^user/admin-dashboard$    user/admin_dashboard.php
+RewriteRule ^user/admin-dashboard/$    user/admin_dashboard.php/
+RewriteRule ^user/user-management$    user/user-management.php
+RewriteRule ^user/user-management/$    user/user-management.php/
+RewriteRule ^user/dealer-management$    user/dealer-management.php
+RewriteRule ^user/dealer-management/$    user/dealer-management.php/
+RewriteRule ^user/approved-dealer$    user/approve-dealer.php
+RewriteRule ^user/approved-dealer/$    user/approve-dealer.php/
+RewriteRule ^user/rejected-dealer$    user/rejected_dealer.php
+RewriteRule ^user/rejected-dealer/$    user/rejected_dealer.php/
+RewriteRule ^user/view-dealer-profile/([a-zA-Z0-9_-]+)$    user/view-dealer-profile.php?user_id=$1
+RewriteRule ^user/view-dealer-profile/([a-zA-Z0-9_-]+)/$    user/view-dealer-profile.php?user_id=$1/
+RewriteRule ^user/upgrade-plan/([a-zA-Z0-9_-]+)$    user/upgrade-plan.php?user_id=$1
+RewriteRule ^user/upgrade-plan/([a-zA-Z0-9_-]+)/$    user/upgrade-plan.php?user_id=$1/
+RewriteRule ^user/manage-coupon$    user/coupon_module.php
+RewriteRule ^user/manage-coupon/$    user/coupon_module.php/
+RewriteRule ^user/manage-coupon/([a-zA-Z0-9_-]+)$    user/coupon_module.php?id=$1
+RewriteRule ^user/manage-coupon/([a-zA-Z0-9_-]+)/$    user/coupon_module.php?id=$1/
+RewriteRule ^user/manage-subscription$    user/subscription_module.php
+RewriteRule ^user/manage-subscription/$    user/subscription_module.php/
+RewriteRule ^user/subscription_module/([a-zA-Z0-9_-]+)$    user/subscription_module.php?id=$1
+RewriteRule ^user/subscription_module/([a-zA-Z0-9_-]+)/$    user/subscription_module.php?id=$1/
+RewriteRule ^user/blog$    user/blog.php
+RewriteRule ^user/blog/$    user/blog.php/
+RewriteRule ^user/blog/([a-zA-Z0-9_-]+)$    user/blog.php?display_data=$1
+RewriteRule ^user/blog/([a-zA-Z0-9_-]+)/$    user/blog.php?display_data=$1/
+RewriteRule ^user/manage-theme$    user/mobile-theme.php
+RewriteRule ^user/manage-theme/$    user/mobile-theme.php/
+RewriteRule ^user/invoice-report$    user/invoice-report.php
+RewriteRule ^user/invoice-report/$    user/invoice-report.php/
+RewriteRule ^user/view-invoice/([a-zA-Z0-9_-]+)$    user/user-invoice.php?user_invoice_id=$1
+RewriteRule ^user/view-invoice/([a-zA-Z0-9_-]+)/$    user/user-invoice.php?user_invoice_id=$1/
+RewriteRule ^user/reset-password$    user/reset-password.php
+RewriteRule ^user/reset-password/$    user/reset-password.php/
+RewriteRule ^user/basic-user-info$    user/basic-user-info.php
+RewriteRule ^user/basic-user-info/$    user/basic-user-info.php/
+RewriteRule ^user/change-contact/([a-zA-Z0-9_-]+)$    user/basic-user-info.php?change_contact=$1
+RewriteRule ^user/change-contact/([a-zA-Z0-9_-]+)/$    user/basic-user-info.php?change_contact=$1/
+RewriteRule ^user/change-email/([a-zA-Z0-9_-]+)$    user/basic-user-info.php?change_email=$1
+RewriteRule ^user/change-email/([a-zA-Z0-9_-]+)/$    user/basic-user-info.php?change_email=$1/
+RewriteRule ^user/services$    user/service.php
+RewriteRule ^user/services/$    user/service.php/
+RewriteRule ^user/services/([a-zA-Z0-9_-]+)$    user/service.php?display_data=$1
+RewriteRule ^user/services/([a-zA-Z0-9_-]+)/$    user/service.php?display_data=$1/
+RewriteRule ^user/gallery$    user/gallery.php
+RewriteRule ^user/gallery/$    user/gallery.php/
+RewriteRule ^user/gallery/([a-zA-Z0-9_-]+)$    user/gallery.php?id=$1
+RewriteRule ^user/gallery/([a-zA-Z0-9_-]+)/$    user/gallery.php?id=$1/
+RewriteRule ^user/video-gallery$    user/video_gallery.php
+RewriteRule ^user/video-gallery/$    user/video_gallery.php/
+RewriteRule ^user/video-gallery/([a-zA-Z0-9_-]+)$    user/video_gallery.php?id=$1
+RewriteRule ^user/video-gallery/([a-zA-Z0-9_-]+)/$    user/video_gallery.php?id=$1/
+RewriteRule ^user/testimonial$    user/testimonial.php
+RewriteRule ^user/testimonial/$    user/testimonial.php/
+RewriteRule ^user/testimonial/([a-zA-Z0-9_-]+)$    user/testimonial.php?id=$1
+RewriteRule ^user/testimonial/([a-zA-Z0-9_-]+)/$    user/testimonial.php?id=$1/
+RewriteRule ^user/client-reviews$    user/clients_review.php
+RewriteRule ^user/client-reviews/$    user/clients_review.php/
+RewriteRule ^user/client-reviews/([a-zA-Z0-9_-]+)$    user/clients_review.php?id=$1
+RewriteRule ^user/client-reviews/([a-zA-Z0-9_-]+)/$    user/clients_review.php?id=$1/
+RewriteRule ^user/our-team$    user/our-team.php
+RewriteRule ^user/our-team/$    user/our-team.php/
+RewriteRule ^user/our-team/([a-zA-Z0-9_-]+)$    user/our-team.php?id=$1
+RewriteRule ^user/our-team/([a-zA-Z0-9_-]+)/$    user/our-team.php?id=$1/
+RewriteRule ^user/payment$    user/payment.php
+RewriteRule ^user/payment/$    user/payment.php/
+RewriteRule ^user/payment/([a-zA-Z0-9_-]+)$    user/payment.php?edit_bank=$1
+RewriteRule ^user/payment/([a-zA-Z0-9_-]+)/$    user/payment.php?edit_bank=$1/
+RewriteRule ^user/manage-section$    user/manage-section.php
+RewriteRule ^user/manage-section/$    user/manage-section.php/
+RewriteRule ^user/my-subscription-plan$    user/my-subscription-plan.php
+RewriteRule ^user/my-subscription-plan/$    user/my-subscription-plan.php/
+RewriteRule ^user/upgrade-plan$    user/plan-selection.php
+RewriteRule ^user/upgrade-plan/$    user/plan-selection.php/
+RewriteRule ^search-profile$    /search-profile.php
+RewriteRule ^search-profile/$    /search-profile.php/
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)$    /search-profile.php?search=$1
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/$   /search-profile.php?search=$1/
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)$    /search-profile.php?state=$1
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/$    /search-profile.php?state=$1/
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$    /search-profile.php?state=$1&city=$2
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$    /search-profile.php?state=$1&city=$2/
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$    /search-profile.php?state=$1&city=$2&search=$3
+RewriteRule ^search-profile/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$    /search-profile.php?state=$1&city=$2&search=$3/
+RewriteRule ^card/([a-zA-Z0-9_-]+)$    digital-card/desktop-card/index.php?custom_url=$1
+RewriteRule ^card/([a-zA-Z0-9_-]+)/$    digital-card/desktop-card/index.php?custom_url=$1/
+
+
+
+##For desktop
+
+
+RewriteRule ^d/services/([^/]*)$    d/services.php?custom_url=$1
+RewriteRule ^d/services/([^/]*)/([^/]*)$    d/services.php?custom_url=$1&token=$2
+RewriteRule ^d/gallery/([^/]*)$    d/gallery.php?custom_url=$1
+RewriteRule ^d/gallery/([^/]*)/([^/]*)$    d/gallery.php?custom_url=$1&token=$2
+RewriteRule ^d/our-team/([^/]*)$    d/our-team.php?custom_url=$1
+RewriteRule ^d/our-team/([^/]*)/([^/]*)$    d/our-team.php?custom_url=$1&token=$2
+RewriteRule ^d/payment/([^/]*)$    d/payment.php?custom_url=$1
+RewriteRule ^d/payment/([^/]*)/([^/]*)$    d/payment.php?custom_url=$1&token=$2
+RewriteRule ^d/testimonial/([^/]*)$    d/testimonial.php?custom_url=$1
+RewriteRule ^d/testimonial/([^/]*)/([^/]*)$    d/testimonial.php?custom_url=$1&token=$2
+RewriteRule ^d/video_gallery/([^/]*)$    d/video_gallery.php?custom_url=$1
+RewriteRule ^d/getData/([^/]*)$    d/getData.php?custom_url=$1
+RewriteRule ^d/video_gallery/([^/]*)/([^/]*)$    d/video_gallery.php?custom_url=$1&token=$2
+RewriteRule ^d/getImgData/([^/]*)$    d/getImgData.php?custom_url=$1
+RewriteRule ^d/getImgData/([^/]*)/([^/]*)$    d/getImgData.php?custom_url=$1&token=$2
+RewriteRule ^d/unsaved-whatsapp/([^/]*)$    d/unsaved-whatsapp.php?custom_url=$1
+RewriteRule ^d/unsaved-whatsapp/([^/]*)/([^/]*)$    d/unsaved-whatsapp.php?custom_url=$1&token=$2
+RewriteRule ^d/share-email/([^/]*)$    d/share-email.php?custom_url=$1
+RewriteRule ^d/share-email/([^/]*)/([^/]*)$    d/share-email.php?custom_url=$1&token=$2
+RewriteRule ^d/qr_code/([^/]*)$    d/qr_code.php?custom_url=$1
+RewriteRule ^d/qr_code/([^/]*)/([^/]*)$    d/qr_code.php?custom_url=$1&token=$2
+RewriteRule ^d/qr-code-testing/([^/]*)$    d/qr-code-testing.php?custom_url=$1
+RewriteRule ^d/qr-code-testing/([^/]*)/([^/]*)$    d/qr-code-testing.php?custom_url=$1&token=$2
+RewriteRule ^d/add-remove-row/([^/]*)$    d/add-remove-row.php?custom_url=$1
+RewriteRule ^d/add-remove-row/([^/]*)/([^/]*)$    d/add-remove-row.php?custom_url=$1&token=$2
+
+
+
+
+#with slash for desk
+RewriteRule ^d/([^/]*)/$    d/index.php?custom_url=$1/
+RewriteRule ^d/gallery/([^/]*)/$    d/gallery.php?custom_url=$1/
+RewriteRule ^d/our-team/([^/]*)/$    d/our-team.php?custom_url=$1/
+RewriteRule ^d/payment/([^/]*)/$    d/payment.php?custom_url=$1/
+RewriteRule ^d/services/([^/]*)/$    d/services.php?custom_url=$1/
+RewriteRule ^d/testimonial/([^/]*)/$    d/testimonial.php?custom_url=$1/
+RewriteRule ^d/video_gallery/([^/]*)/$    d/video_gallery.php?custom_url=$1/
+RewriteRule ^d/getData/([^/]*)/$    d/getData.php?custom_url=$1/
+RewriteRule ^d/getImgData/([^/]*)/$    d/getImgData.php?custom_url=$1/
+RewriteRule ^d/unsaved-whatsapp/([^/]*)/$    d/unsaved-whatsapp.php?custom_url=$1/
+RewriteRule ^d/share-email/([^/]*)/$    d/share-email.php?custom_url=$1/
+RewriteRule ^d/qr_code/([^/]*)/$    d/qr_code.php?custom_url=$1/
+RewriteRule ^d/qr-code-testing/([^/]*)/$    d/qr-code-testing.php?custom_url=$1/
+RewriteRule ^d/add-remove-row/([^/]*)/$    d/add-remove-row.php?custom_url=$1/
+RewriteRule ^d/home/([^/]*)$    d/index.php?custom_url=$1
+RewriteRule ^d/home/([^/]*)/([^/]*)/([^/]*)$     d/index.php?custom_url=$1&user_id=$2&theme=$3
+RewriteRule ^d/home/([^/]*)/([^/]*)/([^/]*)/$     d/index.php?custom_url=$1&user_id=$2&theme=$3/
+RewriteRule ^d/([a-zA-Z0-9_-]+)$    d/index.php?custom_url=$1
+RewriteRule ^d/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$     d/index.php?custom_url=$1&user_id=$2&theme=$3
+RewriteRule ^d/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$     d/index.php?custom_url=$1&user_id=$2&theme=$3/
+RewriteRule ^d/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$     d/index.php?custom_url=$1&token=$2
+#RewriteRule ^d/([^/]*)/([^/]*)/$     d/index.php?custom_url=$1&token=$2/
+
+#RewriteRule ^m/([a-zA-Z0-9_-]+)$    m/index.php?custom_url=$1
+#RewriteRule ^m/([a-zA-Z0-9_-]+)/$    m/index.php?custom_url=$1/
+
+
+RewriteRule ^services/([^/]*)/([^/]*)$ m/services.php?custom_url=$1&token=$2
+RewriteRule ^about-company/([^/]*)/([^/]*)$ m/about-company.php?custom_url=$1&token=$2
+RewriteRule ^find-out-link/([^/]*)/([^/]*)$ m/find-out-link.php?custom_url=$1&token=$2
+RewriteRule ^gallery/([^/]*)/([^/]*)$ m/gallery.php?custom_url=$1&token=$2
+RewriteRule ^our-team/([^/]*)/([^/]*)$ m/our-team.php?custom_url=$1&token=$2
+RewriteRule ^payment/([^/]*)/([^/]*)$ m/payment.php?custom_url=$1&token=$2
+RewriteRule ^testimonial/([^/]*)/([^/]*)$ m/testimonial.php?custom_url=$1&token=$2
+RewriteRule ^video_gallery/([^/]*)/([^/]*)$ m/video_gallery.php?custom_url=$1&token=$2
+RewriteRule ^export-vcf/([^/]*)/([^/]*)$ m/export-vcf.php?custom_url=$1&token=$2
+RewriteRule ^getData/([^/]*)/([^/]*)$ m/getData.php?custom_url=$1&token=$2
+RewriteRule ^getImgData/([^/]*)/([^/]*)$    m/getImgData.php?custom_url=$1&token=$2
+RewriteRule ^unsaved-whatsapp/([^/]*)/([^/]*)$ m/unsaved-whatsapp.php?custom_url=$1&token=$2
+RewriteRule ^share-email/([^/]*)/([^/]*)$    m/share-email.php?custom_url=$1&token=$2
+RewriteRule ^qr_code/([^/]*)/([^/]*)$    m/qr_code.php?custom_url=$1&token=$2
+RewriteRule ^qr-code-testing/([^/]*)/([^/]*)$    m/qr-code-testing.php?custom_url=$1&token=$2
+RewriteRule ^add-remove-row/([^/]*)/([^/]*)$    m/add-remove-row.php?custom_url=$1&token=$2
+
+
+#RewriteRule ^payment/([^/]*)$ m/payment.php?custom_url=$1
+RewriteRule ^services/([^/]*)$ m/services.php?custom_url=$1
+RewriteRule ^about-company/([^/]*)$ m/about-company.php?custom_url=$1
+RewriteRule ^find-out-link/([^/]*)$ m/find-out-link.php?custom_url=$1
+RewriteRule ^gallery/([^/]*)$ m/gallery.php?custom_url=$1
+RewriteRule ^our-team/([^/]*)$ m/our-team.php?custom_url=$1
+RewriteRule ^testimonial/([^/]*)$ m/testimonial.php?custom_url=$1
+RewriteRule ^video_gallery/([^/]*)$ m/video_gallery.php?custom_url=$1
+RewriteRule ^export-vcf/([^/]*)$ m/export-vcf.php?custom_url=$1
+RewriteRule ^getData/([^/]*)$ m/getData.php?custom_url=$1
+RewriteRule ^getImgData/([^/]*)$    m/getImgData.php?custom_url=$1
+RewriteRule ^unsaved-whatsapp/([^/]*)$ m/unsaved-whatsapp.php?custom_url=$1
+RewriteRule ^share-email/([^/]*)$    m/share-email.php?custom_url=$1
+RewriteRule ^qr_code/([^/]*)$    m/qr_code.php?custom_url=$1
+RewriteRule ^qr-code-testing/([^/]*)$    m/qr-code-testing.php?custom_url=$1
+RewriteRule ^add-remove-row/([^/]*)$    m/add-remove-row.php?custom_url=$1
+
+
+#RewriteRule ^payment/([^/]*)/$ m/payment.php?custom_url=$1/
+RewriteRule ^services/([^/]*)/$ m/services.php?custom_url=$1/
+RewriteRule ^about-company/([^/]*)/$ m/about-company.php?custom_url=$1/
+RewriteRule ^find-out-link/([^/]*)/$ m/find-out-link.php?custom_url=$1/
+RewriteRule ^gallery/([^/]*)/$ m/gallery.php?custom_url=$1
+RewriteRule ^our-team/([^/]*)/$ m/our-team.php?custom_url=$1/
+RewriteRule ^testimonial/([^/]*)/$ m/testimonial.php?custom_url=$1/
+RewriteRule ^video_gallery/([^/]*)/$ m/video_gallery.php?custom_url=$1/
+RewriteRule ^export-vcf/([^/]*)/$ m/export-vcf.php?custom_url=$1/
+RewriteRule ^getData/([^/]*)/$ m/getData.php?custom_url=$1/
+RewriteRule ^getImgData/([^/]*)/$    m/getImgData.php?custom_url=$1/
+RewriteRule ^unsaved-whatsapp/([^/]*)/$ m/unsaved-whatsapp.php?custom_url=$1/
+RewriteRule ^share-email/([^/]*)/$    m/share-email.php?custom_url=$1/
+RewriteRule ^qr_code/([^/]*)/$    m/qr_code.php?custom_url=$1/
+RewriteRule ^qr-code-testing/([^/]*)/$    m/qr-code-testing.php?custom_url=$1/
+RewriteRule ^add-remove-row/([^/]*)/$    m/add-remove-row.php?custom_url=$1/
+
+RewriteCond %{REQUEST_URI} !^/index\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/login\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/export-vcf\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/review-flyout-ajax\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/share-email\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/404-not-found\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/about-digital-card\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/about-digital-card-include\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/about-us\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/add-remove-row\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/blogs\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/blogs-details\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/captcha\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/card\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/contact\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/contact-include\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/data-uri-image\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/dealer-forgot-password\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/dealer-register\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/dealership-program\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/demo-cards\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/forgot-password\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/payment\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/pricing\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/privacy-policy\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/qr_code\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/qr-code-testing\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/refund-and-return-policy\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/register\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/screenshot\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/search-profile\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/search-result\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/sign-out\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/sign-out-all\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/sign-out-dealer\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/sign-out-register\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/success-page\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/site-map\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/success-page-razor\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/terms-and-conditions\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/terms-of-use\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/terms-of-dealership\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/test\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/testing\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/review-flyout\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/get_radio_value\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/validate-url\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/validate-recaptcha\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/getData\.php$ [NC]
+
+RewriteRule ^([^/]*)$ m/index.php?custom_url=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$     m/index.php?custom_url=$1&user_id=$2&theme=$3
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$     m/index.php?custom_url=$1&user_id=$2&theme=$3/
+RewriteRule ^([^/]*)/([a-zA-Z0-9_-]+)$ m/index.php?custom_url=$1&token=$2
+##for mobile
+
+#RewriteRule ^([^/]*)$ /m/index.php?custom_url=$1 [L]
+
+# Enable Compression
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+</IfModule>
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 1 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 1 month"
+</IfModule>
+<IfModule mod_headers.c>
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+  Header set Cache-Control "max-age=2678400, public"
+  </filesmatch>
+  <filesmatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\.(pdf)$">
+  Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  <filesmatch "\.(js)$">
+  Header set Cache-Control "max-age=2678400, private"
+  </filesmatch>
+</IfModule>

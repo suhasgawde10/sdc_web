@@ -1,0 +1,437 @@
+﻿@media screen and (max-width: 991px) {
+    .modal_content {
+        width: 100%;
+    }
+
+    #header .logo img {
+        padding: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    .video-box img {
+        width: 70%;
+    }
+
+    .ul_team li {
+        width: 28%;
+        margin-right: 34px;
+    }
+
+    .team .member .pic {
+        border-radius: 4px;
+        overflow: hidden;
+        height: 208px;
+    }
+
+    .member {
+        height: 216px;
+    }
+
+    .counts {
+        background: #f5f5ff;
+        padding: 37px 0 8px;
+    }
+
+    .ul_counts li {
+        width: 46%;
+        display: inline-block;
+        margin-right: 19px;
+        margin-bottom: 50px;
+        vertical-align: top;
+    }
+
+    .price-data-li {
+        width: 48%;
+        display: inline-block;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .contact_form {
+        margin-top: 50px;
+    }
+
+    .footer_logo img {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .loder-img img {
+        width: 50%;
+        position: absolute;
+        top: 35%;
+        left: 25%;
+    }
+
+    .tabl_info {
+        margin-top: 10px;
+    }
+
+    .main-info {
+        padding: 20px 10px;
+        background: lightgray;
+        width: 100%;
+        height: 247px;
+    }
+
+    .ul_card_profile li {
+        width: 48%;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        height: auto;
+    }
+
+    .logo {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 480px) {
+    .features .image img {
+        width: 100%;
+    }
+
+    #myModal {
+        padding-right: 0;
+    }
+
+    .modal_content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .py-5 {
+        padding-top: 20px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .about {
+        padding: 0px 0 0 0;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    .img_div {
+        display: none;
+    }
+
+    .video-box img {
+        width: 100%;
+    }
+
+    .registration_section {
+        padding: 22px 0 !important;
+    }
+
+    .rev_col {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .ul_team {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .member {
+        height: 153px;
+    }
+
+    .team .member .pic {
+        border-radius: 4px;
+        overflow: hidden;
+        height: 146px;
+    }
+
+    .ul_team li {
+        width: 46%;
+        vertical-align: top;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+
+    .testimonials .testimonial-item {
+        margin: 30px 10px 30px 10px;
+        padding: 30px 30px 30px 30px;
+    }
+
+    .box_icons {
+        display: contents;
+    }
+
+    .mb_20 {
+        margin-bottom: 0;
+    }
+
+    #header .logo img {
+        padding: 0;
+        margin: 0;
+        width: 90%;
+    }
+
+    .loder-img img {
+        width: 70%;
+        position: absolute;
+        top: 32%;
+        left: 18%;
+    }
+
+    #hero .btn-get-started {
+        margin-bottom: 26px;
+    }
+
+    .about .icon-box .title {
+        width: 100%
+    }
+
+    .about .icon-box {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 18px;
+        margin-right: 10px;
+    }
+
+    .about .icon-box {
+        padding: 11px 6px;
+    }
+
+    .about .icon-box .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .about .icon-box .icon i {
+        font-size: 21px;
+    }
+
+    .about .icon-box .title {
+        margin-left: 42px;
+        font-weight: 700;
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .contact_form {
+        padding-top: 20px;
+    }
+
+    /*.member {
+    height: 371px;
+    }*/
+    .navbar .getstarted {
+        margin-left: 10px;
+        width: 41%;
+    }
+
+    .navbar .demo_cards {
+        width: 42%;
+    }
+
+    .registration_form {
+        margin-top: 60px;
+        margin-bottom: 27px;
+    }
+
+    .breadcrumbs {
+        margin-top: 50px;
+    }
+
+    .section-title p {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .py-5 {
+        padding-bottom: 0;
+    }
+
+    .counts .count-box {
+        width: 100%;
+    }
+
+    .ul_counts li {
+        width: 45%;
+        display: inline-block;
+        margin-right: 14px;
+        vertical-align: top;
+        margin-bottom: 36px;
+    }
+
+    .counts .count-box span {
+        font-size: 30px;
+    }
+
+    .counts {
+        background: #f5f5ff;
+        padding: 23px 0 0px;
+    }
+
+    .ul_card_profile li {
+        width: 100%;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        height: auto;
+    }
+
+    .main-info {
+        padding: 21px 13px;
+        background: lightgray;
+        width: 100%;
+        height: 278px;
+    }
+
+    .profile-card {
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 555px;
+        box-shadow: 0px 0px 25px -6px rgb(10 48 60 / 23%);
+        background: #fff;
+        border-radius: 8px;
+        max-width: 700px;
+        position: relative;
+    }
+
+    .price-data-li {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    .logo {
+        width: 17%;
+    }
+
+    .pagination-card {
+        position: absolute;
+        left: 20%;
+        bottom: -28px;
+
+    }
+
+    .what_lbl {
+        margin: 0;
+        position: fixed;
+        right: 78px;
+        height: auto;
+        z-index: 0;
+        bottom: 78px;
+        transition: all .5s;
+        border-radius: 3%;
+        background-color: #fff;
+        width: 21%;
+        color: #000;
+        box-shadow: 0 0 15px #999;
+    }
+
+    .whatsapp_icn {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 71px;
+        right: 16px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #282828;
+        z-index: 100;
+    }
+
+    .my-float {
+        color: #ffffff;
+        margin-top: 10px;
+    }
+
+    .phone_call {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 73px;
+        left: 20px;
+        background-color: #187bfb;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #282828;
+        z-index: 100;
+    }
+
+    .title > h2 {
+
+        font-size: 24px !important;
+    }
+
+    .btn-margin-bottom {
+        margin-bottom: 10px;
+    }
+
+    .dearle-para > p {
+        font-size: 17px !important;
+        line-height: 27px !important;
+    }
+
+    .head-title {
+        font-size: 27px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 37px;
+    }
+
+    .program:before {
+        left: calc(50% - 66px) !important;
+    }
+
+    .program:after {
+        left: calc(50% - 10px) !important;
+    }
+
+    .angle_icon_content li {
+        width: 49%;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    #header {
+        margin-top: 0px;
+    }
+    .btn-buy-payment {
+        padding:8px 46px 8px 46px;
+    }
+    .pricing .btn-buy {
+        padding: 8px 37px 8px 37px;
+    }
+    .breadcrumbs {
+        margin-top: 63px ;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+}
+

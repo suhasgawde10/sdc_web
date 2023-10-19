@@ -1,0 +1,1 @@
+http://sms.bulksmsserviceproviders.com/api/send_http.php,4e7d0af46d1d404a7274f2395689d12b,DGCARD,3F7A1-5B10E,DGCARD

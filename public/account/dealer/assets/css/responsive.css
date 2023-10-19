@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+    .upload_camera img {
+        right: 34%;
+    }
+    .copy_button {
+        margin-left: 0;
+    }
+    .preview_btn_margin {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2%;
+    }
+    .preview_padding {
+        padding-right: 34px;
+    }
+    .padding_zero_both{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .margin_div{
+        margin-bottom: 0% !important;
+    }
+    .padding_div{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .preview_button{
+        width: 50%;
+    }
+    .copy_button{
+        width: 31%;
+    }
+    .freelancer_search_box ul li.li_event {
+        width: 41%;
+    }
+    .upi-btn {
+        font-size: 16px !important;
+        position: absolute;
+        top: unset;
+        right: 10px;
+
+        bottom: 10px;
+
+        width: 94%;
+
+        left: 10px;
+    }
+    .upi-btn-div {
+        display: inline-block;
+        padding: 3px;
+        margin-bottom: 31px;
+    }
+    .upi-pay {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .upi-pay li {
+        width: 19%;
+        margin: 0;
+    }
+    .upi-head p {
+        font-size: 14px;
+        padding: 10px 0 0px 0;
+        margin: 0 0 3px;
+    }
+    .upi-head h2 {
+        font-size: 20px;
+    }
+    .cust-model-width {
+        width: 95%;
+    }
+    .dialog_width {
+        width: 95%;
+    }
+    .theme_ul li {
+        margin: 0 0 20px 0;
+        width: 95%;
+    }
+
+    .ul_subcription_list li {
+        width: 30%;}
+    .container_k {
+        background: white;
+        cursor: pointer;
+        border-radius: 15px;
+        position: relative;
+        padding: 25px 30px;
+        color: #DB5EA5;
+        text-align: center;
+    }
+    .container_k::after {
+        content: "";
+        background: #DB5EA5;
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        clip-path: circle(10% at 0% 0%);
+        transition: all 0.3s ease-in;
+    }
+
+    .content_k {
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease-in;
+    }
+
+    .container_k:hover::after {
+        clip-path: circle(100%);
+        color:white;
+    }
+
+    .container_k:hover .content_k {
+        color: white;
+    }
+    .btn_buy_now_sub{
+        background-color:#DB5EA5;
+        padding: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 6px;
+        color:white;
+    }
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 480px) {
+    .profile-ul li {
+        width: 100%;
+    }
+    .company_profile-ul li {
+        width: 100%;
+    }
+    .p-r-0{
+        padding-right: 0;
+    }
+    .preview_btn {
+        width: 63%;
+        display: inline-block;
+        border-radius: unset;
+        vertical-align: inherit;
+    }
+    .info-box-url {
+        background-color: #000000;
+        display: none;
+        color: #888;
+        font-family: sans-serif;
+        font-size: smaller;
+        padding: 10px;
+        width: 362px;
+        position: absolute;
+        /* right: -159px; */
+        bottom: -67px;
+        top: 52px;
+        left: 7px;
+        height: 385px;
+        z-index: 99;
+        padding-bottom: 27px;
+        /* overflow: hidden; */
+    }
+    .copy_button {
+        margin-left: 0;
+    }
+    .row{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .preview_btn_margin {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 3%;
+    }
+    .preview_padding {
+        padding-right: 34px;
+    }
+    .padding_zero_both{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .margin_div{
+        margin-bottom: 0% !important;
+    }
+    .padding_div{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .preview_button{
+        width: 48%;
+        float: right;
+    }
+    .copy_button{
+        width: 31%;
+
+    }
+    .freelancer_search_box ul li.li_event {
+        width: 41%;
+    }
+    .upi-btn {
+        font-size: 16px !important;
+        position: absolute;
+        top: unset;
+        right: 10px;
+
+        bottom: 10px;
+
+        width: 94%;
+
+        left: 10px;
+    }
+    .upi-btn-div {
+        display: inline-block;
+        padding: 3px;
+        margin-bottom: 31px;
+    }
+    .upi-pay {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .upi-pay li {
+        width: 14%;
+        margin: 0;
+    }
+    .upi-head p {
+        font-size: 14px;
+        padding: 10px 0 0px 0;
+        margin: 0 0 3px;
+    }
+    .upi-head h2 {
+        font-size: 16px;
+    }
+    .cust-model-width {
+        width: 95%;
+    }
+    .dialog_width {
+        width: 95%;
+    }
+    .theme_ul li {
+        margin: 0 0 20px 0;
+        width: 95%;
+    }
+    .find_upi_font {
+        font-size: 12px;
+    }
+    .ul_subcription_list li {
+        width: 90%;}
+}
+
+@media (max-width: 360px) {
+    .legend_font_size{
+        font-size: 18px;
+    }
+    .row{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .copy_button {
+        margin-left: 0;
+    }
+    .preview_btn_margin {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2%;
+    }
+    .preview_padding {
+        padding-right: 34px;
+    }
+    .padding_zero{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .padding_both{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .margin_div{
+        margin-bottom: 0% !important;
+    }
+    .padding_div{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .preview_button{
+        width: 50%;
+    }
+    .copy_button{
+        width: 31%;
+    }
+    .freelancer_search_box ul li.li_event {
+        width: 41%;
+    }
+    .upi-btn {
+        font-size: 16px !important;
+        position: absolute;
+        top: unset;
+        right: 10px;
+        bottom: 10px;
+        width: 94%;
+        left: 10px;
+    }
+    .upi-btn-div {
+        display: inline-block;
+        margin-bottom: 45px;
+    }
+    .upi-pay {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .upi-pay li {
+        width: 19%;
+         margin: 0;
+    }
+    .upi-head p {
+        font-size: 14px;
+        padding: 10px 0 0px 0;
+        margin: 0 0 3px;
+    }
+    .upi-head h2 {
+        font-size: 13px;
+    }
+    .find_upi_font {
+        font-size: 10px;
+        border-radius: 5px;
+    }
+    .cust-model-width {
+        width: 95%;
+    }
+    .dialog_width {
+        width: 95%;
+    }
+    .theme_ul li {
+        margin: 0 0 20px 0;
+        width: 95%;
+    }
+    .find_upi_font {
+        font-size: 11px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .upi-head h2 {
+        font-size: 13px;
+    }
+    .find_upi_font {
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+}
