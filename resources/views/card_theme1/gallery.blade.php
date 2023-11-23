@@ -274,7 +274,7 @@
             <!-- Video Modal End -->
 
             <!-- Footer Start -->
-            <x-footer :slug="$slug" />
+            <x-footer :slug="$slug" :masterMenus="$masterMenus" :sectionName="$sectionName" :user="$user" />
             <!-- Footer End -->
 
         </div>

@@ -1,4 +1,5 @@
 <?php
+
 include 'whitelist.php';
 include "controller/ManageUser.php";
 $manage = new ManageUser();
@@ -14,7 +15,7 @@ $con = $controller->connect();
 $adminOTPMessage = "";
 $adminErrorMessage = "";
 
-// echo $security->decrypt("ZW5lamZr8523");
+// echo $security->decrypt("qJaZlnVnZWdo");
 // 090516
 //090516
 // die();
@@ -420,8 +421,12 @@ if (isset($_POST['btn_sign_in'])) {
     if (!$error) {
 
         $userSpecificResult = $manage->getUserProfileForLogin($username, $security->encrypt($pass) . "8523");/**/
+        // print_r($userSpecificResult);
+        // print_r("ss");
+        // exit;
         if ($userSpecificResult != null) {
-
+            // print_r("ss");
+            // exit;
             /*
              * while ($form_data = mysqli_fetch_array($result)) {
                    $email = $form_data["email"];

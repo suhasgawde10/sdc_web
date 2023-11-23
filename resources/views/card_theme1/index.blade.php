@@ -295,7 +295,7 @@
             </div>
             <!-- Message Modal End-->
 
-            <x-footer :slug="$slug" :masterMenus="$masterMenus" :sectionName="$sectionName" />
+            <x-footer :slug="$slug" :masterMenus="$masterMenus" :sectionName="$sectionName" :user="$user" />
 
         </div>
     </div>

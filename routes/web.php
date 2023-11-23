@@ -86,3 +86,20 @@ Route::get('/all-cache', function () {
     Artisan::call('view:clear');
     return 'All cache cleared';
 });
+
+Route::get('/{any}', function ($any) {
+    // Define the base path to your existing-projects directory
+    $basePath = public_path('account');
+
+    // Build the full path to the requested file
+    $filePath = $basePath . '/' . $any;
+
+    // Check if the file exists
+    if (file_exists($filePath)) {
+        // Serve the requested PHP file
+        return response()->file($filePath);
+    } else {
+        // Return a 404 response if the file doesn't exist
+        abort(404);
+    }
+})->where('any', '.*');

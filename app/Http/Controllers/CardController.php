@@ -10,9 +10,9 @@ class CardController extends Controller
 {
     function commonDetails($slug)
     {
-        $user = Cache::remember('user', 10, function () use ($slug) {
-            return DB::table('tb_user_profile')->where('custom_url', $slug)->first();
-        });
+        // $user = Cache::remember('user', 10, function () use ($slug) {
+            $user = DB::table('tb_user_profile')->where('custom_url', $slug)->first();
+        // });
         if ($user === null) {
             throw new \Illuminate\Database\Eloquent\ModelNotFoundException();
         }
@@ -27,7 +27,7 @@ class CardController extends Controller
         });
 
 
-        $services = Cache::remember('services', 10, function () use ($userId) {
+        // $services = Cache::remember('services', 10, function () use ($userId) {
             $servicesData = DB::table('tb_services')->where('user_id', $userId)->get();
 
             // Create an empty array to hold services grouped by serv_type
@@ -59,8 +59,8 @@ class CardController extends Controller
                 ];
             }
 
-            return $servicesByType;
-        });
+            $services = $servicesByType;
+        // });
 
         $clientsReviewCount = DB::table('tb_client_review')->where('user_id', $userId)->count();
 
@@ -77,12 +77,6 @@ class CardController extends Controller
             ];
         }
         // dd($otherLinkArr);
-
-        // $sectionStatus = DB::table('tb_section_status')
-        //     ->where('user_id', $userId)
-        //     ->where('digital_card', 1)
-        //     ->pluck('section_id')
-        //     ->toArray();
 
         $sectionStatus = DB::table('tb_section_status')
             ->select([
@@ -131,6 +125,7 @@ class CardController extends Controller
                 "icon_image" => $value,
             ];
         }
+        // dd($masterMenus,$sectionName);
         return [
             'user'                  => $user,
             'carouselImages'        => $carouselImages,
@@ -171,9 +166,11 @@ class CardController extends Controller
         $carouselImages = $data['carouselImages'];
         $services = $data['services'];
         $otherLinkArr = $data['otherLinkArr'];
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
         $userId = $user->id;
-        $teams = Cache::remember('teams', 10, function () use ($userId) {
-            return DB::table('tb_our_team')->where('user_id', $userId)->orderBy('position_order', 'ASC')->get()->map(function ($teams) {
+        // $teams = Cache::remember('teams', 10, function () use ($userId) {
+            $teams = DB::table('tb_our_team')->where('user_id', $userId)->orderBy('position_order', 'ASC')->get()->map(function ($teams) {
                 return [
                     'name' => $teams->name,
                     'designation' => $teams->designation,
@@ -184,9 +181,9 @@ class CardController extends Controller
                     'status' => $teams->status,
                 ];
             });
-        });
+        // });
         $themeView = 'card_theme1'; // Default theme
-        return view($themeView . '.company', compact('user', 'carouselImages', 'slug', 'teams', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr'));
+        return view($themeView . '.company', compact('user', 'carouselImages', 'slug', 'teams', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr', 'masterMenus', 'sectionName'));
     }
     public function showGallery($slug)
     {
@@ -197,27 +194,29 @@ class CardController extends Controller
         $carouselImages = $data['carouselImages'];
         $services = $data['services'];
         $otherLinkArr = $data['otherLinkArr'];
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
         $userId = $user->id;
-        $images = Cache::remember('images', 10, function () use ($userId) {
-            return DB::table('tb_image')->where('user_id', $userId)->where('status', 1)->orderBy('position_order', 'ASC')->get()->map(function ($images) {
+        // $images = Cache::remember('images', 10, function () use ($userId) {
+            $images = DB::table('tb_image')->where('user_id', $userId)->where('status', 1)->orderBy('position_order', 'ASC')->get()->map(function ($images) {
                 return [
                     'image_name' => $images->image_name,
                     'img_name'   => $images->img_name,
                 ];
             });
-        });
+        // });
 
-        $videos = Cache::remember('videos', 10, function () use ($userId) {
-            return DB::table('tb_video')->where('user_id', $userId)->where('status', 1)->get()->map(function ($videos) {
+        // $videos = Cache::remember('videos', 10, function () use ($userId) {
+            $videos = DB::table('tb_video')->where('user_id', $userId)->where('status', 1)->get()->map(function ($videos) {
                 return [
                     'video_link' => $videos->video_link,
                 ];
             });
-        });
+        // });
         //  dd($videos);
         // Determine which theme view to use
         $themeView = 'card_theme1'; // Default theme
-        return view($themeView . '.gallery', compact('user', 'carouselImages', 'slug', 'images', 'videos', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr'));
+        return view($themeView . '.gallery', compact('user', 'carouselImages', 'slug', 'images', 'videos', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr', 'masterMenus', 'sectionName'));
     }
     public function showClients($slug)
     {
@@ -228,17 +227,19 @@ class CardController extends Controller
         $carouselImages = $data['carouselImages'];
         $userId = $user->id;
         $otherLinkArr = $data['otherLinkArr'];
-        $clients = Cache::remember('clients', 10, function () use ($userId) {
-            return DB::table('tb_clients')->where('user_id', $userId)->where('status', 1)->orderBy('position_order', 'ASC')->get()->map(function ($clients) {
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
+        // $clients = Cache::remember('clients', 10, function () use ($userId) {
+            $clients = DB::table('tb_clients')->where('user_id', $userId)->where('status', 1)->orderBy('position_order', 'ASC')->get()->map(function ($clients) {
                 return [
                     'name'     => $clients->name,
                     'img_name' => $clients->img_name,
                 ];
             });
-        });
+        // });
 
-        $clientReviews = Cache::remember('clientReviews', 10, function () use ($userId) {
-            return DB::table('tb_client_review')->where('user_id', $userId)->where('status', 1)->get()->map(function ($clientReviews) {
+        // $clientReviews = Cache::remember('clientReviews', 10, function () use ($userId) {
+            $clientReviews = DB::table('tb_client_review')->where('user_id', $userId)->where('status', 1)->get()->map(function ($clientReviews) {
                 return [
                     'name'            => $clientReviews->name,
                     'description'     => $clientReviews->description,
@@ -247,11 +248,11 @@ class CardController extends Controller
                     'created_date'   => $clientReviews->created_date,
                 ];
             });
-        });
+        // });
 
         $themeView = 'card_theme1'; // Default theme
 
-        return view($themeView . '.clients', compact('user', 'carouselImages', 'slug', 'clients', 'clientReviews', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr'));
+        return view($themeView . '.clients', compact('user', 'carouselImages', 'slug', 'clients', 'clientReviews', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr', 'masterMenus', 'sectionName'));
     }
 
     public function showPayments($slug)
@@ -264,9 +265,11 @@ class CardController extends Controller
         $carouselImages = $data['carouselImages'];
         $userId = $user->id;
         $otherLinkArr = $data['otherLinkArr'];
-        $bankDetails = Cache::remember('bank_details', 10, function () use ($userId) {
-            return DB::table('tb_bank_details')->where('user_id', $userId)->first();
-        });
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
+        // $bankDetails = Cache::remember('bank_details', 10, function () use ($userId) {
+            $bankDetails = DB::table('tb_bank_details')->where('user_id', $userId)->first();
+        // });
         $bankDetail = [
             "id" => $bankDetails->id,
             "user_id" => $bankDetails->user_id,
@@ -285,7 +288,7 @@ class CardController extends Controller
         // dd($bankDetail);
         // Determine which theme view to use
         $themeView = 'card_theme1'; // Default theme
-        return view($themeView . '.payments', compact('user', 'carouselImages', 'slug', 'bankDetail', 'bank_details_content', 'upiDetails', 'paypalDetails', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr'));
+        return view($themeView . '.payments', compact('user', 'carouselImages', 'slug', 'bankDetail', 'bank_details_content', 'upiDetails', 'paypalDetails', 'clientsReviewCount', 'clientReviewsAvg', 'otherLinkArr', 'masterMenus', 'sectionName'));
     }
 
     public function decryptCustom($string, $key = 5)
@@ -309,9 +312,11 @@ class CardController extends Controller
         $clientReviewsAvg = $data['clientReviewsAvg'];
         $carouselImages = $data['carouselImages'];
         $services = $data['services'];
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
         $themeView = 'card_theme1'; // Default theme
 
-        return view($themeView . '.products', compact('user', 'carouselImages', 'slug', 'services', 'clientsReviewCount', 'clientReviewsAvg'));
+        return view($themeView . '.products', compact('user', 'carouselImages', 'slug', 'services', 'clientsReviewCount', 'clientReviewsAvg', 'masterMenus', 'sectionName'));
     }
 
     public function showServices($slug)
@@ -322,10 +327,11 @@ class CardController extends Controller
         $clientReviewsAvg = $data['clientReviewsAvg'];
         $carouselImages = $data['carouselImages'];
         $services = $data['services'];
+        $masterMenus = $data['masterMenus'];
+        $sectionName = $data['sectionName'];
         $themeView = 'card_theme1'; // Default theme
 
-        return view($themeView . '.services', compact('user', 'carouselImages', 'slug', 'services', 'clientsReviewCount', 'clientReviewsAvg'));
-        // return view($themeView . '.services', compact('user', 'carouselImages', 'slug'));
+        return view($themeView . '.services', compact('user', 'carouselImages', 'slug', 'services', 'clientsReviewCount', 'clientReviewsAvg', 'masterMenus', 'sectionName'));
     }
 
     function parse_url_all($url)

@@ -4,7 +4,9 @@ include("controller.php");
 include "../vendor/autoload.php";
 // include "../vendor/imagine/imagine/src/Gd/Imagine.php";
 // include "../vendor/imagine/imagine/src/Image/Box.php";
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 use Imagine\Gd\Imagine;
 use Imagine\Image\Box;
 class ManageUser

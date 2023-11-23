@@ -160,7 +160,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document1">
                     <div class="modal-content" style="width: 92%;">
                         <form action="" method="post" id="payPal">
-                            <input type="text" name="payPalEmail" id="payPalEmail" value="{{ $paypalDetails->paypal_email }}" hidden>
+                            <input type="text" name="payPalEmail" id="payPalEmail" value="{{(isset($paypalDetails->paypal_email))? $paypalDetails->paypal_email:''}}" hidden>
                             <div class="modal-header bg-info p-2 font-weight-bold" id="headerText">
                                 Pay Using PayPal
                             </div>
@@ -184,7 +184,7 @@
             <!-- Enquiry Modal End-->
 
             <!-- Footer Start -->
-            <x-footer :slug="$slug" />
+            <x-footer :slug="$slug" :masterMenus="$masterMenus" :sectionName="$sectionName" :user="$user" />
             <!-- Footer End -->
 
 
